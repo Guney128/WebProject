@@ -2,19 +2,38 @@
     include_once 'header.php';
 ?>
     <section class="signup-form">
-    /*login register styling*/
-    <div class="wrapper-main">
-        <h2>Sign up</h2>
+    <div class="container">
         <form action="includes/signup.inc.php" method="post">
-            <input name="Salutation" type="radio" value="Mr" /> Mr
-            <input name="Salutation" type="radio" value="Mrs" /> Mrs
-            <br><input type="text" name="fname" placeholder="Enter your first name">
-            <br><input type="text" name="lname" placeholder="Enter your last name">
-            <br><input type="text" name="email" placeholder="Enter your email">
-            <br><input type="text" name="uid" placeholder="Enter your username">
-            <br><input type="password" name="pwd" placeholder="Enter your password">
-            <br><input type="password" name="pwdrepeat" placeholder="Repeat your password">
-            <br><button type="submit" name="submit">Sign up</button><a href="login.php"><small>Already member? Log in!</small></a>
+        <h1>Sign up</h1>
+          <div class="form-group">
+            <br><label for="title">Title</label>
+            <br><input type="text" name="title" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <br><label for="fname">First name</label>
+            <br><input type="text" name="fname" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <br><label for="lname">Last name</label>
+            <br><input type="text" name="lname" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <br><label for="email">Email</label>
+            <br><input type="text" name="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <br><label for="uid">Username</label>
+            <br><input type="text" name="uid" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <br><label for="pwd">Password</label>
+            <br><input type="password" name="pwd" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <br><label for="pwdrepeat">Repeat password</label>
+            <br><input type="password" name="pwdrepeat" class="form-control" required>
+          </div>
+            <input type="submit" class="btn" value="Sign up"></button><br><a href="login.php"><small>Already member? Log in!</small></a>
         </form>
     </div>
         <?php

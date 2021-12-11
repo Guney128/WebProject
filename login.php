@@ -1,16 +1,21 @@
 <?php
     include_once 'header.php';
 ?>
-    <section class="signup-form">
-      /*login register styling*/
-        <div class="wrapper-main">
-        <h2>Login</h2>
+    <section class="login-form">
+      <div class="container">
         <form action="includes/login.inc.php" method="post">
-            <br><input type="text" name="uid" placeholder="Enter your email/username">
-            <br><input type="password" name="password" placeholder="Enter your password">
-            <br><button type="submit" name="submit">login</button><a href="Register.php"><small>Not registered yet? Sign up!</small</a>
+        <h1>Login</h1>
+          <div class="form-group">
+            <br><label for="uid">Username</label>
+            <br><input type="text" name="uid" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <br><label for="password">Password</label>
+            <br><input type="password" name="password" class="form-control" required>
+          </div>
+            <input type="submit" class="btn" value="Login"></button><br><a href="Register.php"><small>Not registered yet? Sign up!</small</a>
         </form> 
-        </div>
+      </div>
         <?php
       if(isset($_GET["error"])){
         if($_GET["error"]=="emptyinput"){

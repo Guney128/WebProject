@@ -43,7 +43,6 @@
         sed diam nonumy eirmod tempor invidunt ut labore et de.</p>
 <div class ="row">
     <div class="rooms-col">
-        /*Bilder dürfen nicht im htm format sein, war glaub ich wegen github so, muss immer .jpg sein, außerem muss man wie beim css ./img(so heißt der img ordner bei mir, sollte bei uns gleich sein)...*/
         <img src="./img/bedroom1.jpg">
         <div class="layer">
             <h3>MIAMI</h3>
