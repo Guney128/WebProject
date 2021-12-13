@@ -17,6 +17,15 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+.nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .nav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
 nav img{
     width: 150px;
 }
@@ -47,6 +56,7 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
+
 .text-box{
     width: 90%;
     color:#fff;
@@ -174,6 +184,7 @@ h3{
 }
 .rooms-col img{
     width: 100%;
+    display: block;
 }
 .layer{
     background: transparent;
@@ -196,8 +207,70 @@ h3{
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
+    opacity: 0;
+    transition: 0.5s;
 }
-/*login register styling, muss noch bisschen bearbeitet werden*/
+.layer:hover h3{
+bottom: 49%;
+opacity: 1;
+}
+/*-----facilities ----*/ 
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.facilities-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.facilities-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0,5s;
+}
+.layer:hover{
+    background: #9ab8c048
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+bottom: 49%;
+opacity: 1;
+}
+
+.wrapper-main{ 
+    border-radius: 30px;
+    box-shadow: 12px 12px 22px rgb(0, 0, 0);
+    padding: 30px;
+    background: white;
+    text-align: center;
+}
+
+
 .container{ 
     margin: auto;
     width: 500px;
@@ -242,4 +315,256 @@ h3{
 }
 .container form .btn:hover{
     opacity: .7;
+}
+
+.slider {
+    overflow-x: hidden;
+    /* width: 1000px; bei Bedarf anpassen, da hier 100% gewünscht sind, kann man die Angabe einsparen */
+}
+ 
+.sliderElements {
+    width: 400%; /* Summe der Einzelbreiten der Slides */
+}
+ 
+.sliderElements > li {
+    float: left;
+    width: 25%; /* 100 durch Anzahl der Slides */
+}
+ 
+/* Clearfix für die Liste */
+.sliderElements:after {
+    content: ".";
+    display: block;
+    height: .1px;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    overflow: hidden;
+}
+.sliderElements {
+    position: relative;
+    left: 0;
+}
+ 
+.slider input:nth-of-type(2):checked ~ .sliderElements {
+    left: -100%;
+}
+ 
+.slider input:nth-of-type(3):checked ~ .sliderElements {
+    left: -200%;
+}
+ 
+/* Statt der Pseudoklasse nth-of-type können wir auch mit der ID des inputs arbeiten */
+#slide04:checked ~ .sliderElements {
+    left: -300%;
+}
+.sliderElements,
+.sliderElements figure,
+.sliderControls {
+    margin: 0;
+}
+ 
+.sliderElements:after {
+    content: ".";
+    display: block;
+    height: .1px;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    overflow: hidden;
+}
+ 
+.cssSlider {
+    overflow-x: hidden;
+}
+ 
+.sliderElements {
+    list-style: none;
+    position: relative;
+    left: 0;
+    width: 400%;
+    margin-bottom: .8em;
+    padding: 0;
+    -webkit-transition: left .8s ease-in-out;
+    -moz-transition: left .8s ease-in-out;
+    -o-transition: left .8s ease-in-out;
+    transition: left .8s ease-in-out;
+}
+ 
+.sliderElements > li {
+    float: left;
+    width: 25%;
+    position: relative;
+}
+ 
+#slide02:checked ~ .sliderElements {
+    left: -100%;
+}
+ 
+#slide03:checked ~ .sliderElements {
+    left: -200%;
+}
+ 
+#slide04:checked ~ .sliderElements {
+    left: -300%;
+}
+ 
+/* Bildunterschrift auf dem Bild positionieren */
+.sliderElements figcaption {
+    display: block;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    padding: .4em;
+    background: rgba(0,0,0,.5);
+}
+ 
+/* Bilder responsive */
+.sliderElements img {
+    width: 100%;
+    height: auto;
+}
+ 
+ 
+/* inputs aus dem Blickfeld schieben */
+.cssSlider input {
+    position: absolute;
+    left: -99999px;
+}
+ 
+/* mittige Ausrichtung der Controls - funktioniert im Zusammenspiel mit inline-block */
+.sliderControls {
+    text-align: center;
+}
+ 
+/* Controls nebeneinander bringen */
+.sliderControls li {
+    display: inline-block;
+}
+ 
+/* Controls auf einheitliche Maße bringen und die Ecken abrunden */
+.sliderControls label {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    background: #68B022;
+    color: #68B022;
+}
+ 
+/* Attributselektor und indirekter Nachfahrkombinator zum ansteuern der labels */
+.sliderControls label:hover,
+#slide01:checked ~ .sliderControls label[for="slide01"],
+#slide02:checked ~ .sliderControls label[for="slide02"],
+#slide03:checked ~ .sliderControls label[for="slide03"],
+#slide04:checked ~ .sliderControls label[for="slide04"] {
+    background: #ddd;
+    color: #ddd;
+}
+
+.footer{
+width: 100%;
+text-align: center;
+padding: 30px 0;
+}
+.footer h4{
+margin-bottom: 25px;
+margin-top: 20px;
+font-weight: 600;
+}
+
+
+/*------ testimonials */
+/* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+  }
+  
+  /* Clear floats after containers */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+  .container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 10%;
+  }
+  
+  /* Increase the font-size of a span element */
+  .container span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  /* Add media queries for responsiveness. This will center both the text and the image inside the container */
+  @media (max-width: 500px) {
+    .container {
+      text-align: center;
+    }
+  
+    .container img {
+      margin: auto;
+      float: none;
+      display: block;
+    }
+  }
+  /*news*/
+  /* Add some padding and a grey background color to containers */
+  .container {
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the input elements and the submit button */
+  input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Add margins to the checkbox */
+  input[type=checkbox] {
+    margin-top: 16px;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
+
+.imprint {
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 250px;
+    margin-top: 250px;
+    text-align: left;
+}
+
+.imprint h3{
+    text-align: left;
+}
+
+.tab {
+    tab-size: 4;
 }
