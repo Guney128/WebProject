@@ -2,8 +2,13 @@
     include_once 'header.php';
 ?>
 
+<?php
+    if(isset($_SESSION["useruid"])) {
+        echo "<p> Welcome " . $_SESSION["useruid"] . "</p>";
+    }
+?>
 <div class="text-box">
-    <h1> Hotel Website </h1>
+    <h1> HOTEL WEBSITE </h1>
     <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br> 
         sed diam nonumy eirmod tempor invidunt ut labore et de.
     </p>
@@ -66,11 +71,60 @@
 </div>
 
 </section>
-
-
-
-    </section>
+<!------ Facilities---->
+<section class= "facilities">
+    <h1>Our Facilities</h1>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br> 
+        sed diam nonumy eirmod tempor invidunt ut labore et de.</p>
+<!-- zuerst das Sichtfenster -->
+<div class="cssSlider">
+ 
+    <!-- die inputs um den Slider zu Steuern -->
+    <input type="radio" name="slider" id="slide01" checked="checked">
+    <input type="radio" name="slider" id="slide02">
+    <input type="radio" name="slider" id="slide03">
+    <input type="radio" name="slider" id="slide04">
+ 
+    <!-- die einzelnen Slides, hier als Liste angelegt -->
+    <ul class="sliderElements">
+        <li>
+            <figure>
+                <img src="./img/dings1.jpg" alt="" height="500" width="800">
+                <figcaption>OUTDOORPOOL</figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <img src="./img/spa1.jpg" alt="" height="500" width="800">
+                <figcaption>INDOORPOOL</figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <img src="./img/spa2.jpg" alt="" height="500" width="800">
+                <figcaption>SPA</figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <img src="./img/bar1.jpg" alt="" height="500" width="800">
+                <figcaption>LOUNGE</figcaption>
+            </figure>
+        </li>
+    </ul>
+ 
+    <!-- Eine Steuerung -->
+    <ul class="sliderControls">
+        <li><label for="slide01">1</label></li>
+        <li><label for="slide02">2</label></li>
+        <li><label for="slide03">3</label></li>
+        <li><label for="slide04">4</label></li>
+    </ul>
+</div>
+</section> 
 <!----JavaScript für Media---->
+
+
 <?php
     include_once 'footer.php';
 ?>

@@ -7,13 +7,13 @@
         <h1>Login</h1>
           <div class="form-group">
             <br><label for="uid">Username</label>
-            <br><input type="text" name="uid" class="form-control" required>
+            <br><input type="text" name="uid" class="form-control">
           </div>
           <div class="form-group">
             <br><label for="password">Password</label>
-            <br><input type="password" name="password" class="form-control" required>
+            <br><input type="password" name="pwd" class="form-control">
           </div>
-            <input type="submit" class="btn" value="Login"></button><br><a href="Register.php"><small>Not registered yet? Sign up!</small</a>
+            <input type="submit" class="btn" name="submit" value="Login"></button><br><a href="Register.php"><small>Not registered yet? Sign up!</small</a>
         </form> 
       </div>
         <?php
