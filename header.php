@@ -32,7 +32,19 @@
                             }
                         ?>
                         <li><a href="contact.php">CONTACT</a></li>
+                       <li> <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                        </a> </li>
                     </ul>
                 </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
+                <script>
+ function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
             </nav>
