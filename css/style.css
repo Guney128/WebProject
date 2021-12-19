@@ -21,7 +21,7 @@ nav{
     background-color: #ddd;
     color: black;
   }
-  
+
   .nav a.active {
     background-color: #04AA6D;
     color: white;
@@ -321,16 +321,16 @@ opacity: 1;
     overflow-x: hidden;
     /* width: 1000px; bei Bedarf anpassen, da hier 100% gewünscht sind, kann man die Angabe einsparen */
 }
- 
+
 .sliderElements {
     width: 400%; /* Summe der Einzelbreiten der Slides */
 }
- 
+
 .sliderElements > li {
     float: left;
     width: 25%; /* 100 durch Anzahl der Slides */
 }
- 
+
 /* Clearfix für die Liste */
 .sliderElements:after {
     content: ".";
@@ -345,15 +345,15 @@ opacity: 1;
     position: relative;
     left: 0;
 }
- 
+
 .slider input:nth-of-type(2):checked ~ .sliderElements {
     left: -100%;
 }
- 
+
 .slider input:nth-of-type(3):checked ~ .sliderElements {
     left: -200%;
 }
- 
+
 /* Statt der Pseudoklasse nth-of-type können wir auch mit der ID des inputs arbeiten */
 #slide04:checked ~ .sliderElements {
     left: -300%;
@@ -363,7 +363,7 @@ opacity: 1;
 .sliderControls {
     margin: 0;
 }
- 
+
 .sliderElements:after {
     content: ".";
     display: block;
@@ -373,11 +373,11 @@ opacity: 1;
     font-size: 0;
     overflow: hidden;
 }
- 
+
 .cssSlider {
     overflow-x: hidden;
 }
- 
+
 .sliderElements {
     list-style: none;
     position: relative;
@@ -390,25 +390,25 @@ opacity: 1;
     -o-transition: left .8s ease-in-out;
     transition: left .8s ease-in-out;
 }
- 
+
 .sliderElements > li {
     float: left;
     width: 25%;
     position: relative;
 }
- 
+
 #slide02:checked ~ .sliderElements {
     left: -100%;
 }
- 
+
 #slide03:checked ~ .sliderElements {
     left: -200%;
 }
- 
+
 #slide04:checked ~ .sliderElements {
     left: -300%;
 }
- 
+
 /* Bildunterschrift auf dem Bild positionieren */
 .sliderElements figcaption {
     display: block;
@@ -419,30 +419,30 @@ opacity: 1;
     padding: .4em;
     background: rgba(0,0,0,.5);
 }
- 
+
 /* Bilder responsive */
 .sliderElements img {
     width: 100%;
     height: auto;
 }
- 
- 
+
+
 /* inputs aus dem Blickfeld schieben */
 .cssSlider input {
     position: absolute;
     left: -99999px;
 }
- 
+
 /* mittige Ausrichtung der Controls - funktioniert im Zusammenspiel mit inline-block */
 .sliderControls {
     text-align: center;
 }
- 
+
 /* Controls nebeneinander bringen */
 .sliderControls li {
     display: inline-block;
 }
- 
+
 /* Controls auf einheitliche Maße bringen und die Ecken abrunden */
 .sliderControls label {
     width: 20px;
@@ -455,7 +455,7 @@ opacity: 1;
     background: #68B022;
     color: #68B022;
 }
- 
+
 /* Attributselektor und indirekter Nachfahrkombinator zum ansteuern der labels */
 .sliderControls label:hover,
 #slide01:checked ~ .sliderControls label[for="slide01"],
@@ -487,33 +487,33 @@ font-weight: 600;
     padding: 16px;
     margin: 16px 0;
   }
-  
+
   /* Clear floats after containers */
   .container::after {
     content: "";
     clear: both;
     display: table;
   }
-  
+
   /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
   .container img {
     float: left;
     margin-right: 20px;
     border-radius: 10%;
   }
-  
+
   /* Increase the font-size of a span element */
   .container span {
     font-size: 20px;
     margin-right: 15px;
   }
-  
+
   /* Add media queries for responsiveness. This will center both the text and the image inside the container */
   @media (max-width: 500px) {
     .container {
       text-align: center;
     }
-  
+
     .container img {
       margin: auto;
       float: none;
@@ -526,7 +526,7 @@ font-weight: 600;
     padding: 20px;
     background-color: #f1f1f1;
   }
-  
+
   /* Style the input elements and the submit button */
   input[type=text], input[type=submit] {
     width: 100%;
@@ -536,19 +536,19 @@ font-weight: 600;
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
-  
+
   /* Add margins to the checkbox */
   input[type=checkbox] {
     margin-top: 16px;
   }
-  
+
   /* Style the submit button */
   input[type=submit] {
     background-color: #04AA6D;
     color: white;
     border: none;
   }
-  
+
   input[type=submit]:hover {
     opacity: 0.8;
   }
@@ -582,31 +582,22 @@ font-weight: 600;
     background-color: blanchedalmond;
 }
 
-.showcase video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-}
 /* contact *****/
-* 
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body
+
+.contact
 {
     width: 100%;
     height: 100vh;
     display: grid;
     align-items: center;
-    background: #8e8e8e;
     font-family: 'Poppins', sans-serif;
 }
+
 .contact-in {
    width: 80%;
    height: auto;
@@ -637,6 +628,7 @@ body
    flex: 50%;
    text-align: center;
 }
+
 .contact-form h1
 {
    margin-bottom: 10px;
@@ -682,5 +674,24 @@ body
     background: #8e2de2;
     color: #fff;
     padding: 10px 0;
-   
+
+}
+.conthead{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 25px;
+  
+}
+
+/*welcome,  arbeite gerade an etwas */
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
 }
