@@ -33,34 +33,35 @@
             <br><label for="pwdrepeat">Repeat password</label>
             <br><input type="password" name="pwdrepeat" class="form-control">
           </div>
-            <input type="submit" class="btn" value="Sign Up" name="submit"></button><br><a href="login.php"><small>Already member? Log in!</small></a>
+            <input type="submit" class="btn" value="Sign Up" name="submit"><br>
+            <a href="login.php"><small>Already member? Log in!</small></a><br>
+            <?php
+              if(isset($_GET["error"])){
+              if($_GET["error"]=="emptyinput"){
+                echo "<h3>Fill in all fields!</h3>";
+              }
+              else if($_GET["error"]=="invaliduid"){
+                echo "<h3>Choose a proper  username!</h3>";
+              }
+              else if($_GET["error"]=="invalidemail"){
+                echo "<h3>Choose a proper email!</h3>";
+              }
+              else if($_GET["error"]=="pwdsdontmatch"){
+                echo "<h3>Paaswords don't match up!</h3>";
+              }
+              else if($_GET["error"]=="stmtfailed"){
+                echo "<h3>Something went wrong, retry!</h3>";
+              }
+              else if($_GET["error"]=="usernametaken"){
+                echo "<h3>Username already taken!</h3>";
+              }
+              else if($_GET["error"]=="none"){
+                echo "<h3>CYou have signed up!</h3>";
+              }
+              }
+              ?>
         </form>
     </div>
-        <?php
-      if(isset($_GET["error"])){
-        if($_GET["error"]=="emptyinput"){
-          echo "<p>Fill in all fields!</p>";
-        }
-        else if($_GET["error"]=="invaliduid"){
-          echo "<p>Choose a proper  username!</p>";
-        }
-        else if($_GET["error"]=="invalidemail"){
-          echo "<p>Choose a proper email!</p>";
-        }
-        else if($_GET["error"]=="pwdsdontmatch"){
-          echo "<p>Paaswords don't match up!</p>";
-        }
-        else if($_GET["error"]=="stmtfailed"){
-          echo "<p>Something went wrong, retry!</p>";
-        }
-        else if($_GET["error"]=="usernametaken"){
-          echo "<p>Username already taken!</p>";
-        }
-        else if($_GET["error"]=="none"){
-          echo "<p>CYou have signed up!</p>";
-        }
-      }
-    ?>
     </section>
 
 <?php

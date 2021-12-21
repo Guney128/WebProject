@@ -13,19 +13,20 @@
             <br><label for="password">Password</label>
             <br><input type="password" name="pwd" class="form-control">
           </div>
-            <input type="submit" class="btn" name="submit" value="Login"></button><br><a href="Register.php"><small>Not registered yet? Sign up!</small</a>
+            <input type="submit" class="btn" name="submit" value="Login"><br>
+            <a href="Register.php"><small>Not registered yet? Sign up!</small</a><br>
+           <?php
+              if(isset($_GET["error"])){
+              if($_GET["error"]=="emptyinput"){
+                echo "<h3>Fill in all fields!</h3>";
+              }
+              else if($_GET["error"]=="wronglogin"){
+                echo "<h3>Incorrect login information!</h3>";
+              }
+            }
+            ?>
         </form> 
       </div>
-        <?php
-      if(isset($_GET["error"])){
-        if($_GET["error"]=="emptyinput"){
-          echo "<p>Fill in all fields!</p>";
-        }
-        else if($_GET["error"]=="wronglogin"){
-          echo "<p>Incorrect login information!</p>";
-        }
-      }
-    ?>
     </section>
 <?php
     include_once 'footer.php';
