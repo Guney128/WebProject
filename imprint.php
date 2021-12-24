@@ -3,10 +3,10 @@
 ?>
 
 <div class="text-box">
-    <h1> IMPRINT </h1>
-    <h4>Information obligation according to §5 E-Commerce Law, §14 Corporate Code,<br>
+<h1> IMPRINT </h1>
+    <p> Information obligation according to §5 E-Commerce Law, §14 Corporate Code,<br>
         §63 Trade Regulations and Disclosure Obligation according to §25 Media Act.
-    </h4>
+    </p>
 </div>
 
         </section>
@@ -16,10 +16,64 @@
 </div>
 
 <!---- testimonials---> 
+<!--- <section class="u-align-center u-border-1 u-border-grey-75 u-clearfix u-palette-2-base u-section-1" id="carousel_e8db">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1">Meet The Team</h2>
+        <p class="u-align-center u-text u-text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+        <p class="u-text u-text-3">Image by <a href="https://www.freepik.com/photos/people" class="u-border-1 u-border-white u-btn u-button-link u-button-style u-none u-text-body-alt-color u-btn-1">Freepik</a>
+        </p>
+        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-left u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <img alt="" class="u-border-1 u-border-grey-75 u-image u-image-default u-image-1" data-image-width="1200" data-image-height="1600" src="images/gueneyimprint.jpeg">
+                <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
+                  <div class="u-container-layout">
+                    <p class="u-align-left u-text u-text-grey-30 u-text-4">Web designer&nbsp;</p>
+                    <h3 class="u-align-left u-custom-font u-font-raleway u-text u-text-palette-2-base u-text-5">Bob Brown</h3>
+                    <p class="u-align-left u-text u-text-body-color u-text-6">Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum</p>
+                    <p class="u-align-left u-text u-text-7"><span class="u-file-icon u-icon u-icon-1"><img src="images/447031.png" alt=""></span>&nbsp;1210 Vienna&nbsp;
+                    </p>
+                    <a href="https://nicepage.com/website-templates" class="u-active-none u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-body-color u-btn-2"><span class="u-icon u-icon-2"><svg class="u-svg-content" viewBox="0 0 405.333 405.333" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M373.333,266.88c-25.003,0-49.493-3.904-72.704-11.563c-11.328-3.904-24.192-0.896-31.637,6.699l-46.016,34.752    c-52.8-28.181-86.592-61.952-114.389-114.368l33.813-44.928c8.512-8.512,11.563-20.971,7.915-32.64    C142.592,81.472,138.667,56.96,138.667,32c0-17.643-14.357-32-32-32H32C14.357,0,0,14.357,0,32    c0,205.845,167.488,373.333,373.333,373.333c17.643,0,32-14.357,32-32V298.88C405.333,281.237,390.976,266.88,373.333,266.88z"></path></svg><img></span>&nbsp;+1 (234) 567-8910
+                    </a>
+                    <p class="u-align-left u-text u-text-8"><span class="u-file-icon u-icon u-icon-3"><img src="images/956451.png" alt=""></span>&nbsp;Text with icon
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round u-white">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <img alt="" class="u-border-1 u-border-grey-75 u-image u-image-contain u-image-default u-image-2" data-image-width="545" data-image-height="863" src="images/sohaimprint.jpeg">
+                <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-group-2">
+                  <div class="u-container-layout">
+                    <p class="u-align-left u-text u-text-default u-text-grey-30 u-text-9">Web designer</p>
+                    <h3 class="u-align-left u-custom-font u-font-raleway u-text u-text-default u-text-palette-2-base u-text-10">Mary Smith&nbsp;</h3>
+                    <p class="u-align-left u-text u-text-body-color u-text-11">Glavi amet ritnisl libero molestie ante ut fringilla purus eros quis glavrid from dolor amet iquam lorem bibendum</p>
+                    <p class="u-align-left u-text u-text-12"><span class="u-file-icon u-icon u-icon-4"><img src="images/4470311.png" alt=""></span>&nbsp;Text with icon
+                    </p>
+                    <a href="https://nicepage.com/website-templates" class="u-active-none u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-body-color u-btn-3"><span class="u-icon u-icon-5"><svg class="u-svg-content" viewBox="0 0 405.333 405.333" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M373.333,266.88c-25.003,0-49.493-3.904-72.704-11.563c-11.328-3.904-24.192-0.896-31.637,6.699l-46.016,34.752    c-52.8-28.181-86.592-61.952-114.389-114.368l33.813-44.928c8.512-8.512,11.563-20.971,7.915-32.64    C142.592,81.472,138.667,56.96,138.667,32c0-17.643-14.357-32-32-32H32C14.357,0,0,14.357,0,32    c0,205.845,167.488,373.333,373.333,373.333c17.643,0,32-14.357,32-32V298.88C405.333,281.237,390.976,266.88,373.333,266.88z"></path></svg><img></span>&nbsp;+1 (234) 567-8910
+                    </a>
+                    <p class="u-align-left u-text u-text-13"><span class="u-file-icon u-icon u-icon-6"><img src="images/95645.png" alt=""></span>&nbsp;Text with icon
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> --->
+
+
+
+
+
+
+
 <div class="container">
   <img src="./img/gueneyimprint.jpeg" alt="Avatar" style="width:90px">
-  <p><span>Güney Arslan</span> Web designer</p>
-    <p>if21b014@technikum-wien.at<br>066012345678
+  <p><span>Güney Arslan</span>  Web designer</p>
+    <p>if21b014@technikum-wien.at<br>066012345678 <br> Höchstädtpl. 6 <br> 1200 Vienna <br> member of WKO 
   </p>
 </div>
 
@@ -122,3 +176,7 @@ You agree that the original English text shall prevail in the case of a dispute.
 <p>We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.
   By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.</p>
 </div>
+
+<?php
+    include_once 'footer.php';
+?>
