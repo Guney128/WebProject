@@ -33,7 +33,10 @@
             <br><label for="pwdrepeat">Repeat password</label>
             <br><input type="password" name="pwdrepeat" class="form-control">
           </div>
-            <input type="submit" class="btn" value="Sign Up" name="submit"><br>
+          <div class="container">
+            <input type="submit" class="btn" value="Sign Up" name="submit">
+          </div>
+            <br>
             <a href="login.php"><small>Already member? Log in!</small></a><br>
             <?php
               if(isset($_GET["error"])){

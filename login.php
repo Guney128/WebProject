@@ -13,18 +13,23 @@
             <br><label for="password">Password</label>
             <br><input type="password" name="pwd" class="form-control">
           </div>
-            <input type="submit" class="btn" name="submit" value="Login"><br>
-            <a href="Register.php"><small>Not registered yet? Sign up!</small</a><br>
-           <?php
+          <div class="container">
+            <input type="submit" class="btn" name="submit" value="Login">
+          </div>
+            <br>
+            <a href="Register.php"><small>Not registered yet? Sign up!</small></a><br>
+          <div class="h2">
+            <?php
               if(isset($_GET["error"])){
               if($_GET["error"]=="emptyinput"){
-                echo "<h3>Fill in all fields!</h3>";
+                echo "<h2>Fill in all fields!</h2>";
               }
               else if($_GET["error"]=="wronglogin"){
-                echo "<h3>Incorrect login information!</h3>";
+                echo "<h2>Incorrect login information!</h2>";
               }
             }
             ?>
+          </div>
         </form> 
       </div>
     </section>
