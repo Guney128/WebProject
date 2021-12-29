@@ -2,11 +2,6 @@
     include_once 'header.php';
 ?>
 
-<?php
-    if(isset($_SESSION["useruid"])) {
-        echo "<p> Welcome " . $_SESSION["useruid"] . "</p>";
-    }
-?>
 <div class="text-box">
     <h1> HOTEL WEBSITE </h1>
     <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br> 
