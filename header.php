@@ -14,13 +14,12 @@
     <body>
         <section class="header">
             <nav>
-            
+
                 <div class= "nav-links" id="navLinks"> 
                     <i class="fa fa-times" onclick="hideMenu()"> </i>
                     <ul>
                         <li><a href="index.php">HOME</a></li>
                         <li><a href="news.php">NEWS</a></li>
-                        <li><a href="imprint.php">IMPRINT</a></li>
                         <?php
                             if(isset($_SESSION["useruid"])){
                                 echo "<li><a href='profile.php'>PROFILE PAGE</a></li>";
@@ -31,8 +30,8 @@
                                 echo "<li><a href='login.php'>LOGIN</a></li>";
                             }
                         ?>
-                        <li><a href="contact.php">CONTACT</a></li>
-                       <li> <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <li><a href="contact.php">CONTACT</a></li>                    
+                        <li> <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars"></i>
                         </a> </li>
                     </ul>
@@ -47,4 +46,3 @@
   }
 }
 </script>
-            </nav>

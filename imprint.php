@@ -25,7 +25,7 @@
 </div>
 
 <div class="container">
-  <img src="./img/sohaimprint.jpeg" alt="Avatar" style="width:130px">
+  <img src="./img/sohaimprint.jpeg" alt="Avatar" style="width:150px">
   <p><span >Soha Khan</span> Web designer</p>
   <p>if21b013@technikum-wien.at<br>067612345678 <br> Höchstädtpl. 6 <br> 1200 Vienna <br> member of WKO 
 </p>
@@ -103,8 +103,6 @@
       </div>
     </section>
 
-  </body>
-</html>
 <?php
     include_once 'footer.php';
 ?>

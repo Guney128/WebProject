@@ -850,3 +850,16 @@ body {
       margin-bottom: 60px;
     }
   }
+
+  /* welcome und loc gehören zur Begrüßung*/
+.welcome {
+    align-items: center;
+    text-align: center;
+}
+
+.loc {
+    position: absolute;
+    vertical-align: middle;
+    margin-top: 20%;
+    margin-left: 38%;
+}
