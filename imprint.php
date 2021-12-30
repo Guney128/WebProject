@@ -99,10 +99,13 @@
     </section>
 
 
-    <div class="container">
+   <!---- <div class="container">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2657.2635296969383!2d16.3774273!3d48.2400543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d064f6ed971cf%3A0x99fec738bbb12f9d!2sTechnikum%20Wien!5e0!3m2!1sde!2sat!4v1640891262243!5m2!1sde!2sat" width="1100" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+--->
+      <div class="map-responsive">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2657.2635296969383!2d16.3774273!3d48.2400543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d064f6ed971cf%3A0x99fec738bbb12f9d!2sTechnikum%20Wien!5e0!3m2!1sde!2sat!4v1640891262243!5m2!1sde!2sat" width="1100" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
+
     
 
 
