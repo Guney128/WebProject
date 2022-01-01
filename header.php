@@ -19,11 +19,15 @@
                     <i class="fa fa-times" onclick="hideMenu()"> </i>
                     <ul>
                         <li><a href="index.php">HOME</a></li>
-                        <li><a href="news.php">NEWS</a></li>
                         <?php
                             if(isset($_SESSION["useruid"])){
                                 echo "<li><a href='profile.php'>PROFILE PAGE</a></li>";
                                 echo "<li><a href='includes/logout.inc.php'>LOG OUT</a></li>";
+                                
+                                if($_SESSION['userid']==3){
+                                    echo "<li><a href='news.php'>NEWS</a></li>";
+                                }
+    
                             }
                             else{
                                 echo "<li><a href='Register.php'>SIGN UP</a></li>";
