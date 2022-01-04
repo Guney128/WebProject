@@ -2,8 +2,6 @@
 include 'init.php'; 
 if(!$users->isLoggedIn()) {
 	header("Location: login.php");	
-} else {
-	header("Location: ticket.php");	
 }
 include('inc/header.php');
 $user = $users->getUserInfo();

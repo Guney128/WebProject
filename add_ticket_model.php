@@ -3,7 +3,7 @@
 		<form method="post" id="ticketForm">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">×</button>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title"><i class="fa fa-plus"></i> Add Ticket</h4>
 				</div>
 				<div class="modal-body">

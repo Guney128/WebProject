@@ -6,12 +6,12 @@ if(!$users->isLoggedIn()) {
 include('inc/header.php');
 $user = $users->getUserInfo();
 ?>
-<title>Helpdesk System with PHP & MySQL</title>
+<title>Build Helpdesk System with PHP & MySQL</title>
 <script src="js/jquery.dataTables.min.js"></script>
 <script src="js/dataTables.bootstrap.min.js"></script>		
 <link rel="stylesheet" href="css/dataTables.bootstrap.min.css" />
 <script src="js/general.js"></script>
-<script src="js/department.js"></script>
+<script src="js/user.js"></script>
 <link rel="stylesheet" href="css/style.css" />
 <?php include('inc/container.php');?>
 <div class="container">	
@@ -26,47 +26,69 @@ $user = $users->getUserInfo();
 				<h3 class="panel-title"></h3>
 			</div>
 			<div class="col-md-2" align="right">
-				<button type="button" name="add" id="addDepartment" class="btn btn-success btn-xs">Add New</button>
+				<button type="button" name="add" id="addUser" class="btn btn-success btn-xs">Add New</button>
 			</div>
 		</div>
 	</div>
 			
-	<table id="listDepartment" class="table table-bordered table-striped">
+	<table id="listUser" class="table table-bordered table-striped">
 		<thead>
 			<tr>
 				<th>S/N</th>
-				<th>Department</th>					
+				<th>Name</th>					
+				<th>Email</th>
+				<th>Created</th>
+				<th>Role</th>
 				<th>Status</th>
 				<th></th>
-				<th></th>									
+				<th></th>				
 			</tr>
 		</thead>
 	</table>
 	
-	<div id="departmentModal" class="modal fade">
+	<div id="userModal" class="modal fade">
 		<div class="modal-dialog">
-			<form method="post" id="departmentForm">
+			<form method="post" id="userForm">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title"><i class="fa fa-plus"></i> Add Department</h4>
+						<h4 class="modal-title"><i class="fa fa-plus"></i> Add User</h4>
 					</div>
 					<div class="modal-body">
 						<div class="form-group"
-							<label for="department" class="control-label">Department</label>
-							<input type="text" class="form-control" id="department" name="department" placeholder="department" required>			
+							<label for="username" class="control-label">Name*</label>
+							<input type="text" class="form-control" id="userName" name="userName" placeholder="User name" required>			
 						</div>
+						
+						<div class="form-group"
+							<label for="username" class="control-label">Email*</label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Email" required>			
+						</div>
+						
+						<div class="form-group">
+							<label for="status" class="control-label">Role</label>				
+							<select id="role" name="role" class="form-control">
+							<option value="admin">Admin</option>				
+							<option value="user">Member</option>	
+							</select>						
+						</div>	
+						
 						<div class="form-group">
 							<label for="status" class="control-label">Status</label>				
 							<select id="status" name="status" class="form-control">
-							<option value="1">Enable</option>				
-							<option value="0">Disable</option>	
+							<option value="1">Active</option>				
+							<option value="0">Inactive</option>	
 							</select>						
-						</div>						
+						</div>
+
+						<div class="form-group"
+							<label for="username" class="control-label">New Password</label>
+							<input type="password" class="form-control" id="newPassword" name="newPassword" placeholder="Password">			
+						</div>											
 						
 					</div>
 					<div class="modal-footer">
-						<input type="hidden" name="departmentId" id="departmentId" />
+						<input type="hidden" name="userId" id="userId" />
 						<input type="hidden" name="action" id="action" value="" />
 						<input type="submit" name="save" id="save" class="btn btn-info" value="Save" />
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
