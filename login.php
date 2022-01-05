@@ -1,42 +1,41 @@
-<?php 
-include 'init.php';
-if($users->isLoggedIn()) {
-	header('Location: ticket.php');
-}
-$errorMessage = $users->login();
-include('inc/header.php');
+<?php
+    include_once 'header.php';
 ?>
-<title>Helpdesk System with PHP & MySQL</title>
-<?php include('inc/container.php');?>
-<div class="container contact">	
-	<h2>Helpdesk System</h2>	
-	<div class="col-md-6">                    
-		<div class="panel panel-info">
-			<div class="panel-heading" style="background:#00796B;color:white;">
-				<div class="panel-title">User Login</div>                        
-			</div> 
-			<div style="padding-top:30px" class="panel-body" >
-				<?php if ($errorMessage != '') { ?>
-					<div id="login-alert" class="alert alert-danger col-sm-12"><?php echo $errorMessage; ?></div>                            
-				<?php } ?>
-				<form id="loginform" class="form-horizontal" role="form" method="POST" action="">                                    
-					<div style="margin-bottom: 25px" class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input type="text" class="form-control" id="email" name="email" placeholder="email" style="background:white;" required>                                        
-					</div>                                
-					<div style="margin-bottom: 25px" class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-						<input type="password" class="form-control" id="password" name="password"placeholder="password" required>
-					</div>
-					<div style="margin-top:10px" class="form-group">                               
-						<div class="col-sm-12 controls">
-						  <input type="submit" name="login" value="Login" class="btn btn-success">						  
-						</div>						
-					</div>	
-					
-				</form>   
-			</div>                     
-		</div>  
-	</div>
-</div>	
-<?php include('inc/footer.php');?>
+    <section class="login-form">
+      <div class="container">
+        <form action="includes/login.inc.php" method="post">
+        <h1>Login</h1>
+          <div class="form-group">
+            <br><label for="uid">Username</label>
+            <br><input type="text" name="uid" class="form-control">
+          </div>
+          <div class="form-group">
+            <br><label for="password">Password</label>
+            <br><input type="password" name="pwd" class="form-control">
+          </div>
+          <div class="container">
+            <input type="submit" class="btn" name="submit" value="Login">
+          </div>
+            <br>
+            <a href="Register.php"><small>Not registered yet? Sign up!</small></a><br>
+          <div class="h2">
+            <?php
+              if(isset($_GET["error"])){
+              if($_GET["error"]=="emptyinput"){
+                echo "<h2>Fill in all fields!</h2>";
+              }
+              else if($_GET["error"]=="wronglogin"){
+                echo "<h2>Incorrect login information!</h2>";
+              }
+              else if ($_GET["error"] == "userNotActive") {
+                echo "<h2>User is not active!</h2>";
+        }
+            }
+            ?>
+          </div>
+        </form> 
+      </div>
+    </section>
+<?php
+    include_once 'footer.php';
+?>

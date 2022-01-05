@@ -9,13 +9,8 @@
 
    <section class="signup-form">
     <div class="container">
-        <?php
-            if(isset($_GET['error'])){
-                ?>
-                <small class="alert alert-danger">Data is required</small>
-            <?php
-            }
-
+          <?php
+      
            $currentUser = $_SESSION['useruid'];
            $sql = "SELECT * FROM users WHERE usersUid = '$currentUser'";
 
@@ -26,8 +21,7 @@
            if($gotResults){
                if(mysqli_num_rows($gotResults)>0){
                    while($row = mysqli_fetch_array($gotResults)){
-                       //print_r($row["useruid"]);
-                    ?>
+          ?>
         <form action="includes/profile.inc.php" method="post">
         <h1>Update data</h1>
           <div class="form-group">
@@ -48,7 +42,7 @@
           </div>
           <div class="form-group">
             <br><label for="uid">Username</label>
-            <br><input type="text" name="updateUid" class="form-control"  value="<?php echo $row["useruid"]; ?>">
+            <br><input type="text" name="updateUid" class="form-control"  value="<?php echo $row["usersUid"]; ?>">
           </div>
           <div class="container">
             <input type="submit" class="btn" value="Update" name="update">

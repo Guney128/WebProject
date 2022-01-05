@@ -109,6 +109,11 @@ function loginUser($conn, $username, $pwd){
         header("login: ../login.php?error=wronglogin");
         exit();
     }
+    if(uidActive($conn, $username) == 0){
+        header("location: ../login.php?error=userNotActive");
+        exit();
+    }
+    
     else if($checkpwd === true){
         session_start();
         $_SESSION["userid"]= $uidExists["usersId"];
@@ -118,3 +123,25 @@ function loginUser($conn, $username, $pwd){
     }
 }
 
+function uidActive($conn, $username)
+{ //Schaut ob Benutzername oder Email bereits existiert.
+    $sql = "SELECT Status FROM users WHERE usersUid = ?"; //? als Placeholder //Daten werden nicht sofort an Datenbank geschickt -> sonst anfällig für Sql injections.
+    $stmt = mysqli_stmt_init($conn); //Führe connection aus
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) { //Wenn es nicht funktioniert, dann wird der User zu Startseite mit einer Error Message geschickt.
+        header("location: ../index.php?error=stmtfailed3");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $username); //2S- also Strings weil oben 2 Werte sind. Gleiche Reihenfolge wie oben nötig. Die vom User eingegebenen Parameter werden in der Datenbank angezeigt.
+    mysqli_stmt_execute($stmt); //Die Informationen vom User werden nun in der Datenbank gespeichert.
+
+    $resultData = mysqli_stmt_get_result($stmt); //Gibt die Ergebnisse der obigen Zeile aus.
+
+    if ($row = mysqli_fetch_assoc($resultData)) { //Wenn ich Daten aus der Datenbank bekommen dann zählt das als "True"
+        return reset($row); // returning alle daten wenn der user in der datenbank existiert
+    } else {
+        return 0;
+    }
+    mysqli_stmt_close($stmt);
+}
