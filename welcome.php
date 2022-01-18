@@ -12,14 +12,16 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Hotel website</title>
     
-    <style>
+    <style> 
     a:link, a:visited {
+    
     background-color: #f44336;
     color: white;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+
     }
 
     a:hover, a:active {
@@ -29,6 +31,8 @@
     body {
     background-image: url("./img/rooftop.jpg");
     height: 100%;
+    display: block;
+    margin-left: -200px;
     }
     </style>
 
