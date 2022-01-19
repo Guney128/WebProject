@@ -4,65 +4,46 @@
 
 <div class="text-box">
     <h1> HOTEL WEBSITE </h1>
-    <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br> 
-        sed diam nonumy eirmod tempor invidunt ut labore et de.
+    <p> Twice the comfort, twice the value, twice the hotel -<br> 
+            the best value under the sun.
     </p>
     <a href=""class="hero-btn">Visit us to know more! </a>
 </div>
 
         </section>
 
-<?php
-//news
-    require('includes/dbh.inc.php');
-    $stmt = $mysql->prepare("SELECT * FROM news ORDER BY shared_at DESC LIMIT 5");
-    $stmt->execute();
-    $count = $stmt->rowCount();
-
-
-    if ($count == 0){
-        echo "No news where found.";
-    } else {
-        while ($row = $stmt->fetch()){
-            ?>
-            <h1><?php echo $row["heading"] ?></h1>
-            <p><?php echo substr($row["caption"], 0, 300) ?></p>
-            <img src='".$row [$img_dir']>
-            <p><?php echo date("d.m.Y H:i", $row["shared_at"]) ?></p>
-            <?php
-        }
-    }
-?>
-
 
  <!----suites oder news idk------>       
 <section class= "suites">
     <h1>Suites We Offer</h1>
-    <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+    <p> Enjoy luxurious accommodations and creative cuisine at the best locations when you stay with our Hotel.</p>
 
 <div class="row">
 <div class="suites-col">
     <h3>SUITE I</h3>
-    <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br> 
-        sed diam nonumy eirmod tempor invidunt ut labore et de.</p>
+    <p>  This spacious two-room suite offers 580-710 square feet of living space and features a living room and sleeping room with two queen size beds.  <br> 
+   </p>
 </div>
 <div class="suites-col">
     <h3>SUITE II</h3>
-    <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br> 
-        sed diam nonumy eirmod tempor invidunt ut labore et de.</p>
+    <p> This specialty suite offers 1,100 square feet of living space and features a luxurious sitting room with a dining table, plush sofas and a large screen TV along with a king-bedded sleeping room. <br> 
+       </p>
 </div>
 <div class="suites-col">
     <h3>SUITE III</h3>
-    <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br> 
-        sed diam nonumy eirmod tempor invidunt ut labore et de.</p>
+    <p> This large upscale suite offers 680-780 square feet of living space and features a living room overlooking a king bedded sleeping room.
+<br> 
+       </p>
 </div>
 
 </div>
 <!-----Rooms----->
 <section class= "rooms">
     <h1>Our Rooms</h1>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br> 
-        sed diam nonumy eirmod tempor invidunt ut labore et de.</p>
+    
+        <p>Our 173 elegant rooms feature skyline views and indulgent marble bathrooms with whirlpools or deep soaking tubs.  <br> 
+        Each suite offers complimentary wireless internet, in-room safes, refrigerator, iron, ironing board, hairdryer, and coffee makers. <br>
+        Handicapped suites are also available.</p>
 <div class ="row">
     <div class="rooms-col">
         <img src="./img/bedroom1.jpg">
@@ -91,8 +72,9 @@
 <!------ Facilities---->
 <section class= "facilities">
     <h1>Our Facilities</h1>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br> 
-        sed diam nonumy eirmod tempor invidunt ut labore et de.</p>
+    <p>Check-in time: From 14:00 pm (AT local time) - 24 hour reception  <br> 
+       Check out time: By 11:00 am (AT local time) <br> 
+       </p>
 <!-- zuerst das Sichtfenster -->
 <div class="cssSlider">
  

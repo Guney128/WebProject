@@ -30,7 +30,7 @@
       <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top" aria-controls="faq-17" aria-expanded="false" data-toggle="collapse" href="#faq-17" role="button">
         <div class="position-relative">
           <h2 class="h4 m-0 pr-3">
-          What is "SIGN UP" for?
+          What is "sign up" for?
           </h2>
           <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
           <i class="fa fa-plus"></i>
@@ -98,7 +98,7 @@
       <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top" aria-controls="faq-21" aria-expanded="false" data-toggle="collapse" href="#faq-21" role="button">
         <div class="position-relative">
           <h2 class="h4 m-0 pr-3">
-          What is "TICKETS" for? 
+          What is "tickets" for? 
           </h2>
           <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
           <i class="fa fa-plus"></i>
